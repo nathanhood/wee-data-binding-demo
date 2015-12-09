@@ -1,0 +1,11 @@
+{
+	"name": "Shopping Cart Data-binding Demo",
+	"version": "1.0.0",
+	"description": "Simple demo of Wee data binding",
+	"homepage": "https://www.weepower.com",
+	"author": "Wee",
+	"autoload": true,
+	"dependencies": {
+		"wee": "^3.0.0"
+	}
+}
