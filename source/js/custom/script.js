@@ -1,8 +1,6 @@
-// Add custom JavaScript here
-// Route documentation available at https://www.weepower.com/script/routes
-
 Wee.routes.map({
-	'$root': 'common'
+	 '$any': 'user',
+	 '$root': 'checkout'
 });
 
 Wee.ready('routes:run');

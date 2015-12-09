@@ -3,8 +3,8 @@
 		<li class="item">
 			<h3 class="item__name">{{ name }}</h3>
 			<div class="item__inner-right">
-				<div class="item__price">${{ price|currencyFormat }}</div>
-				<input type="number" name="item{{ # }}_qty" value="{{ qty }}" class="item__qty" data-id="{{ # }}" data-ref="itemQty">
+				<div class="item__price">{{ price|currencyFormat }}</div>
+				<input type="number" name="item{{ # }}_qty" value="{{ qty }}" min="0" class="item__qty" data-id="{{ # }}" data-ref="itemQty">
 				<div class="item__remove" data-id="{{ # }}" data-ref="removeItem">remove</div>
 			</div>
 		</li>
@@ -14,14 +14,14 @@
 <div class="totals">
 	<div class="totals__line">
 		<div class="totals__text">Subtotal</div>
-		<div class="totals__value">${{ items|subtotal }}</div>
+		<div class="totals__value">{{ items|subtotal|currencyFormat }}</div>
 	</div>
 	<div class="totals__line">
 		<div class="totals__text">Tax</div>
-		<div class="totals__value">${{ items|tax }}</div>
+		<div class="totals__value">{{ items|tax|currencyFormat }}</div>
 	</div>
 	<div class="totals__line">
 		<div class="totals__text">Total</div>
-		<div class="totals__value">${{ items|total }}</div>
+		<div class="totals__value">{{ items|total|currencyFormat }}</div>
 	</div>
 </div>

@@ -1,0 +1,24 @@
+{
+	"items": [
+		{
+			"name": "T-shirt",
+			"qty": 1,
+			"price": 15
+		},
+		{
+			"name": "Hat",
+			"qty": 2,
+			"price": 8
+		},
+		{
+			"name": "Coat",
+			"qty": 1,
+			"price": 60
+		},
+		{
+			"name": "Stockings",
+			"qty": 2,
+			"price": 6
+		}
+	]
+}
