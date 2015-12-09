@@ -97,8 +97,6 @@ Wee.fn.make('store', {
 		$('ref:itemQty').on('change', function() {
 			var $el = $(this);
 
-			console.log('changed');
-
 			scope.updateItemQuantity($el.data('id'), $el.val());
 		});
 	}
