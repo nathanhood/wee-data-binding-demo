@@ -81,7 +81,6 @@ Wee.fn.make('store', {
 		});
 	},
 	removeItem: function(id) {
-		// TODO: input change event not firing after dropping item
 		this.app.$drop('items.' + id);
 	},
 	updateItemQuantity: function(id, qty) {
