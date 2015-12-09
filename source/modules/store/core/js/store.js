@@ -46,6 +46,9 @@ Wee.fn.make('store', {
 		var scope = this;
 
 		Wee.view.addHelper({
+			currencyFormat: function() {
+				return this.val.toFixed(2);
+			},
 			subtotal: function() {
 				var subtotal = 0;
 
@@ -78,6 +81,7 @@ Wee.fn.make('store', {
 		});
 	},
 	removeItem: function(id) {
+		// TODO: input change event not firing after dropping item
 		this.app.$drop('items.' + id);
 	},
 	updateItemQuantity: function(id, qty) {
@@ -92,6 +96,8 @@ Wee.fn.make('store', {
 
 		$('ref:itemQty').on('change', function() {
 			var $el = $(this);
+
+			console.log('changed');
 
 			scope.updateItemQuantity($el.data('id'), $el.val());
 		});
